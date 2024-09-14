@@ -1,38 +1,143 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Global Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f4f8;
 }
 
-.App-link {
-  color: #61dafb;
+.app {
+  text-align: center;
+  width: 80%;
+  max-width: 800px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.welcome-screen, .survey-screen, .thank-you-screen {
+  padding: 20px;
+}
+
+/* Welcome Screen Styles */
+.welcome-screen {
+  background-color: #007bff;
+  color: #ffffff;
+  border-radius: 10px;
+  padding: 40px 20px;
+}
+
+.welcome-screen h1 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.welcome-screen button {
+  background-color: #ffffff;
+  color: #007bff;
+  border: none;
+  border-radius: 5px;
+  padding: 15px 30px;
+  font-size: 1.2em;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.welcome-screen button:hover {
+  background-color: #007bff;
+  color: #ffffff;
+}
+
+/* Survey Screen Styles */
+.survey-screen {
+  background-color: #ffffff;
+  color: #333333;
+}
+
+.survey-screen h2 {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+}
+
+.survey-screen p {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+
+.rating {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.rating-button {
+  background-color: #007bff;
+  color: #ffffff;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  margin: 0 5px;
+  font-size: 1.2em;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  opacity: 0.7;
+}
+
+.rating-button:hover, .rating-button.selected {
+  background-color: #0056b3;
+  opacity: 1;
+}
+
+.rating-button.selected {
+  background-color: #0056b3;
+  color: #ffffff;
+}
+
+textarea {
+  width: calc(100% - 40px);
+  padding: 10px;
+  font-size: 1.2em;
+  border: 1px solid #ced4da;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  resize: vertical;
+}
+
+.navigation-buttons {
+  margin-top: 20px;
+}
+
+.navigation-buttons button {
+  background-color: #007bff;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 1em;
+  cursor: pointer;
+  margin: 0 5px;
+  transition: background-color 0.3s;
+}
+
+.navigation-buttons button:hover {
+  background-color: #0056b3;
+}
+
+/* Thank You Screen Styles */
+.thank-you-screen {
+  background-color: #28a745;
+  color: #ffffff;
+  border-radius: 10px;
+  padding: 40px 20px;
+}
+
+.thank-you-screen h1 {
+  font-size: 2em;
+  margin-bottom: 20px;
 }
